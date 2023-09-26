@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: express-in-docker
+    command: npm run dev
+    ports:
+      - 3000:3000
+    
+    # volumes Must match Dockerfile.WORKDIR in order to HotReload
+    volumes:
+      - .:/usr/src/app
