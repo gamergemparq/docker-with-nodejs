@@ -1,6 +1,7 @@
 const express = require('express');
 
 const ProductRoutes = require("./routes/product.route");
+const SettingsRoutes = require("./routes/settings.route");
 
 const app = express();
 // const PORT = 3000;
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
 
 /* Telling the server to use the routes in the ProductRoutes file. */
 app.use("/api", ProductRoutes);
+app.use("/api", SettingsRoutes);
 
 module.exports = app;
 
